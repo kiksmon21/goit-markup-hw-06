@@ -152,7 +152,7 @@ body {
     background-color: var(--iris);
     position: absolute;
     left: 0px;
-    bottom: -8px;
+    bottom: -20px;
     opacity: 0;
     pointer-events: none;
     color: var(--iris);
@@ -181,17 +181,14 @@ body {
 }
 
 .section.hero {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('./../images/people-office-1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    row-gap: 48px;
     padding: 188px 0 188px 0;
     margin: 0 auto;
+    max-width: 1440px;
 }
 
 .catch-phrase {
@@ -390,7 +387,7 @@ body {
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     background-color: var(--navyblue, #2E2F42);
     padding: 120px 0 120px 0;
 }
@@ -401,6 +398,10 @@ body {
 
 .footer-item:nth-child(1) {
     margin-right: 120px;
+}
+
+.footer-item:nth-child(2) {
+    margin-right: 119px;
 }
 
 .logo-span-2{
@@ -447,7 +448,7 @@ body {
     display: flex;
     justify-content: left;
     gap: 16px;
-    margin-right: 80px;
+    /* margin-right: 80px; */
 }
 
 .footer-subscribe-header {
@@ -486,6 +487,16 @@ body {
     justify-content: center;
     align-items: center;
     gap: 16px;
+}
+
+.subscribe-button:hover {
+    background: var(--ocean, #404BBF);
+    cursor: pointer;
+}
+
+.subscribe-button:active {
+    background: var(--cloud, #F4F4FD);
+    color: var(--ocean, #404BBF);
 }
 
 /* PORTFOLIO PAGE CUSTOMIZATIONS */
@@ -626,11 +637,6 @@ body {
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     position: relative;
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    gap: 10px; */
 }
 
 .modal-close {
@@ -648,9 +654,15 @@ body {
     left: 90%;
 }
 
+.modal-close:hover {
+    background: var(--ocean, #404BBF);
+    fill: var(--cloud);
+    cursor: pointer;
+}
+
 .modal-close:active {
-    background-color: var(--ocean);
-    fill: #FFF;
+    background-color: var(--cloud);
+    fill: var(--ocean);
 }
 
 .backdrop.is-hidden {
@@ -677,14 +689,13 @@ body {
     font-size: 12px;
     line-height: 14px; /* 116.667% */
     letter-spacing: 0.48px;
+    padding: 24px 24px;
 }
 
 .backdrop-form-label {
     display: block;
     margin-top: 28px;
     position: relative;
-    margin-left: 24px;
-
 }
 
 .backdrop-form-label-span {
@@ -735,7 +746,6 @@ body {
 .backdrop-form-label-checkbox {
     display: inline-block;
     margin: 20px 0px 0px;
-    padding: 0px 24px;
 }
 
 .backdrop-form-label-checkbox input {
@@ -782,6 +792,7 @@ textarea {
 
 .backdrop-send-button:hover {
     background: var(--ocean, #404BBF);
+    cursor: pointer;
 }
 
 .backdrop-send-button:active {
